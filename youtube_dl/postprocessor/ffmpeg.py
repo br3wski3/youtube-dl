@@ -418,10 +418,10 @@ class FFmpegMetadataPP(FFmpegPostProcessor):
         add('date', 'upload_date')
         add(('description', 'comment'), 'description')
         add('purl', 'webpage_url')
-        add('track', 'track_number')
+        add('track', ('track_number', 'playlist_index'))
         add('artist', ('artist', 'creator', 'uploader', 'uploader_id'))
         add('genre')
-        add('album')
+        add('album', ('album', 'playlist'))
         add('album_artist')
         add('disc', 'disc_number')
 
